@@ -2,6 +2,12 @@
 			var jQueryScript = document.createElement('script');  
 			jQueryScript.setAttribute('src','https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js');
 			document.head.appendChild(jQueryScript);
+			jQueryScript.setAttribute('src','controllers/main.js');
+			document.head.appendChild(jQueryScript);
+			jQueryScript.setAttribute('src','services/todos.js');
+			document.head.appendChild(jQueryScript);
+			jQueryScript.setAttribute('src','core.js');
+			document.head.appendChild(jQueryScript);
 			var modal = null;
 			
 			// Get the button that opens the modal
