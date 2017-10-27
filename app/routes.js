@@ -23,7 +23,7 @@ module.exports = function (app) {
     });
      app.get('/api/renderdata', function (req, res) {
          
-         res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');
+         res.setHeader('Access-Control-Allow-Origin', '*');
 
         // Request methods you wish to allow
         res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
