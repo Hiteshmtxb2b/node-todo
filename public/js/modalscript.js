@@ -29,7 +29,7 @@
 				var response = '';
 				var xhttp = new XMLHttpRequest();
 				xhttp.onreadystatechange = function() {
-					debugger;
+		
 					if (this.readyState == 4 && this.status == 200) {
 						var tempdiv = document.getElementById("modalbody");
 						tempdiv.innerHTML=xhttp.responseText;
