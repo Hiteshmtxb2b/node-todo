@@ -22,6 +22,16 @@ module.exports = function (app) {
         getTodos(res);
     });
      app.get('/api/renderdata', function (req, res) {
+         
+         res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8888');
+
+        // Request methods you wish to allow
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+        // Request headers you wish to allow
+        res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+
         // use mongoose to get all todos in the database
          fs.readFile('./public/index.html', function (err, html) {
             if (err) {
