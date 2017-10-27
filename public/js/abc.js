@@ -1,3 +1,3 @@
-$("#test").click(function () {
-alert("test");
+document.getElementById("test").addEventListener("click", function(){
+    alert("Hello World");
 });
