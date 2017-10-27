@@ -26,10 +26,11 @@ module.exports = function (app) {
          fs.readFile('/public/index.html', function (err, html) {
             if (err) {
                 res.send(err);
-            }       
-            res.writeHeader(200, {"Content-Type": "text/html"});  
-            res.write(html);  
-            res.end();  
+            }else{    
+                res.writeHeader(200, {"Content-Type": "text/html"});  
+                res.write(html);  
+                res.end();  
+            }
         });
     });
     // create todo and send back all todos after creation
