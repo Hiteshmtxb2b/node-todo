@@ -1,4 +1,5 @@
 var Todo = require('./models/todo');
+var fs = require('fs');
 
 function getTodos(res) {
     Todo.find(function (err, todos) {
@@ -20,7 +21,17 @@ module.exports = function (app) {
         // use mongoose to get all todos in the database
         getTodos(res);
     });
-
+     app.get('/api/renderdata', function (req, res) {
+        // use mongoose to get all todos in the database
+         fs.readFile('./index.html', function (err, html) {
+            if (err) {
+                res.send(err);
+            }       
+            res.writeHeader(200, {"Content-Type": "text/html"});  
+            res.write(html);  
+            res.end();  
+        });
+    });
     // create todo and send back all todos after creation
     app.post('/api/todos', function (req, res) {
 
