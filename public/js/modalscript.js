@@ -15,10 +15,13 @@
 			// Fire the loading
 			head.appendChild(script);
 			}
-			loadScript('https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js');
-			loadScript('https://cztestapp.herokuapp.com/js/controllers/main.js');
-			loadScript('https://cztestapp.herokuapp.com/js/services/todos.js');
-			loadScript('https://cztestapp.herokuapp.com/js/core.js');
+			function loadscripts(){
+				loadScript('https://cztestapp.herokuapp.com/js/controllers/main.js');
+				loadScript('https://cztestapp.herokuapp.com/js/services/todos.js');
+				loadScript('https://cztestapp.herokuapp.com/js/core.js');
+			}
+			loadScript('https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js',loadscripts);
+			
 			
 			var modal = null;
 			
