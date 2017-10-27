@@ -5,7 +5,9 @@ angular.module('todoController', [])
 	.controller('mainController', ['$scope','$http','Todos', function($scope, $http, Todos) {
 		$scope.formData = {};
 		$scope.loading = true;
-
+		$scope.alertMsg=function(data){
+			alert(data);
+		}
 		// GET =====================================================================
 		// when landing on the page, get all todos and show them
 		// use the service to get all the todos
