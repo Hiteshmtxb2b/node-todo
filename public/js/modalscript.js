@@ -1,3 +1,4 @@
+'use strict';
 // Get the modal
 			function loadScript(url, callback)
 			{
