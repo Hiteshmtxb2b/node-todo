@@ -1,13 +1,25 @@
 // Get the modal
-			var jQueryScript = document.createElement('script');  
-			jQueryScript.setAttribute('src','https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js');
-			document.head.appendChild(jQueryScript);
-			jQueryScript.setAttribute('src','https://cztestapp.herokuapp.com/js/controllers/main.js');
-			document.head.appendChild(jQueryScript);
-			jQueryScript.setAttribute('src','https://cztestapp.herokuapp.com/js/services/todos.js');
-			document.head.appendChild(jQueryScript);
-			jQueryScript.setAttribute('src','https://cztestapp.herokuapp.com/js/core.js');
-			document.head.appendChild(jQueryScript);
+			function loadScript(url, callback)
+			{
+			// Adding the script tag to the head as suggested before
+			var head = document.getElementsByTagName('head')[0];
+			var script = document.createElement('script');
+			script.type = 'text/javascript';
+			script.src = url;
+
+			// Then bind the event to the callback function.
+			// There are several events for cross browser compatibility.
+			script.onreadystatechange = callback;
+			script.onload = callback;
+
+			// Fire the loading
+			head.appendChild(script);
+			}
+			loadScript('https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js');
+			loadScript('https://cztestapp.herokuapp.com/js/controllers/main.js');
+			loadScript('https://cztestapp.herokuapp.com/js/services/todos.js');
+			loadScript('https://cztestapp.herokuapp.com/js/core.js');
+			
 			var modal = null;
 			
 			// Get the button that opens the modal
