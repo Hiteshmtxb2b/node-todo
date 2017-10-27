@@ -23,7 +23,7 @@ module.exports = function (app) {
     });
      app.get('/api/renderdata', function (req, res) {
         // use mongoose to get all todos in the database
-         fs.readFile('./index.html', function (err, html) {
+         fs.readFile(__dirname + '/public/index.html', function (err, html) {
             if (err) {
                 res.send(err);
             }       
