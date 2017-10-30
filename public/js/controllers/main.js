@@ -1,4 +1,7 @@
 'use strict';
+function alertmymessage(){
+	alert(345);
+}
 angular.module('todoController', [])
 
 	// inject the Todo service factory into our controller
