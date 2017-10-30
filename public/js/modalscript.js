@@ -62,7 +62,10 @@ function slowLoad(){
 		
 					if (this.readyState == 4 && this.status == 200) {
 						var tempdiv = document.getElementById("modalbody");
-						tempdiv.innerHTML=xhttp.responseText;
+						//tempdiv.innerHTML=xhttp.responseText;
+						var htmlcontent = $('#modalbody ');
+						htmlcontent.load(xhttp.responseText)
+						$compile(htmlcontent.contents())($scope);
 					}
 				};
 				xhttp.open("GET", "https://cztestapp.herokuapp.com/api/renderdata", true);
