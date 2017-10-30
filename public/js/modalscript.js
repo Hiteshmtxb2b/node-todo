@@ -18,8 +18,8 @@
 			head.appendChild(script);
 			}
 			function loadscripts(){
-				loadScript('https://cztestapp.herokuapp.com/js/controllers/main.js');
 				loadScript('https://cztestapp.herokuapp.com/js/services/todos.js');
+				loadScript('https://cztestapp.herokuapp.com/js/controllers/main.js');
 				window.setTimeout(slowLoad,5000);
 			}
 function slowLoad(){
