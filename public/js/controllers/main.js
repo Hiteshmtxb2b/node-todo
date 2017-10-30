@@ -1,6 +1,9 @@
 'use strict';
-function alertmymessage(){
+function alertmymessage($scope){
 	alert(345);
+	$scope.alertMsg=function(data){
+			alert(data);
+		}
 }
 app.controller('mainController', ['$scope','$http','Todos', function($scope, $http, Todos) {
 		$scope.formData = {};
