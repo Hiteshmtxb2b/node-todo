@@ -20,7 +20,7 @@
 			function loadscripts(){
 				loadScript('https://cztestapp.herokuapp.com/js/controllers/main.js');
 				loadScript('https://cztestapp.herokuapp.com/js/services/todos.js');
-				loadScript('https://cztestapp.herokuapp.com/js/core.js');
+				Window.setTimeout(loadScript('https://cztestapp.herokuapp.com/js/core.js'),5000);
 			}
 		    
 			var modal = null;
