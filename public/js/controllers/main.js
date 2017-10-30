@@ -2,7 +2,7 @@
 function alertmymessage(){
 	alert(345);
 }
-angular.module('todoController', [])
+angular.module('todoModule', [])
 
 	// inject the Todo service factory into our controller
 	.controller('mainController', ['$scope','$http','Todos', function($scope, $http, Todos) {
