@@ -67,7 +67,7 @@ function slowLoad(){
 						var parser = new DOMParser();
 						var doc = parser.parseFromString(xhttp.responseText, "text/xml");
 						//htmlcontent.load(doc.firstChild);
-						tempdiv.innerHTML = doc.firstChild;
+						tempdiv.innerHTML = doc.firstChild.innerHTML;
 						//$compile(htmlcontent.contents())($scope);
 					}
 				};
