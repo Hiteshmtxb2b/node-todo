@@ -20,8 +20,13 @@
 			function loadscripts(){
 				loadScript('https://cztestapp.herokuapp.com/js/controllers/main.js');
 				loadScript('https://cztestapp.herokuapp.com/js/services/todos.js');
-				window.setTimeout(loadScript('https://cztestapp.herokuapp.com/js/core.js'),5000);
+				window.setTimeout(slowLoad,5000);
 			}
+function slowLoad(){
+	debugger;
+	alert("Ruk Bhai");
+	loadScript('https://cztestapp.herokuapp.com/js/core.js');
+}
 		    
 			var modal = null;
 			
