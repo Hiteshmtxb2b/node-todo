@@ -1,2 +1,2 @@
 'use strict';
-angular.module('scotchTodo', ['todoController', 'todoService']);
+angular.module('scotchTodo', ['todoModule', 'todoService']);
