@@ -1,2 +1,2 @@
 'use strict';
-angular.module('scotchTodo', ['todoModule', 'todoService']);
+var app = angular.module('scotchTodo', []);
