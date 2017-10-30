@@ -38,6 +38,7 @@
 				modalDiv.innerHTML = '<div id="myModal" class="modal"><div class="modal-content"><button id="close" class="close">&times;</button><div id="modalbody">Some text in the Modal..</div></div></div>';
 				modal = document.getElementById('myModal');
 				modal.style.display = "block";
+				loadScript('https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js',loadscripts);
 				span = document.getElementById("close");
 				addEvent();
 				getData();
